@@ -23,7 +23,7 @@ LOSS = 'sparse_categorical_crossentropy'
 METRICS = ['accuracy']
 
 # Model save path
-MODEL_SAVE = "trained_models"
+SAVED_MODELS = "trained_models"
 
 # Data handling
 TRAIN_CLASSES = os.listdir(TRAIN_DATA_PATH)
@@ -33,3 +33,7 @@ TEST_CLASSES = os.listdir(TEST_DATA_PATH)
 LABELS = len(TRAIN_CLASSES)
 TEST_SIZE = 0.3
 EPOCHS = 10
+
+# current model 
+CURRENT_MODEL = "trained_models\\for 20 classes\\2024-09-03 01-15-07.keras"
+

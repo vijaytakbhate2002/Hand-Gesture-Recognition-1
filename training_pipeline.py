@@ -1,8 +1,8 @@
 from datetime import datetime
-from image_processing import data_handling, model_training, model_handling, data_splitter
+from processes import data_handling, model_training, model_handling, data_splitter
 
 def trainPipe() -> None:
-    data = data_handling.testImagesReader()
+    data = data_handling.trainImagesReader()
     X_train, X_test, y_train, y_test = data_splitter.dataSplitter(data)
 
     trainer = model_training.ModelTrainer()
