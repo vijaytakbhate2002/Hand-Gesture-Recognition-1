@@ -1,3 +1,5 @@
+# import sys
+# sys.path.append('\\'.join(list(__file__.split("\\"))[:-2]))
 from tensorflow import keras
 import numpy as np
 import cv2
