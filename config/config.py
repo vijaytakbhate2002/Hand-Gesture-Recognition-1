@@ -1,4 +1,5 @@
 import os
+import numpy as np
 
 # Required paths
 ROOT_PATH = '\\'.join(list(__file__.split('\\'))[:-2])
@@ -9,12 +10,13 @@ TEST_DATA_PATH = os.path.join(DATA_PATH, "test")
 # Models
 GOOGLE_MODEL = os.path.join(ROOT_PATH, "google_mediapipe_models\\gesture_recognizer.task")
 DOCUMENTATION = os.path.join(ROOT_PATH, "documentation\\code_nomenclature.docx")
+JSON_PATH = os.path.join(ROOT_PATH, 'generated_text.json')
 
 # Processing constants
 PROCESSED_IMAGE_SHAPE = (40,40)
 CNN_INPUT_IMAGE_SHAPE = (40, 40, 3)  
 
-# Methods of processing
+# Methods of processing 
 NORMALIZATION = "MinMaxScaler"
 
 # Compilation parameters
@@ -49,5 +51,6 @@ FIRST_HALF = {
                 8: 'i', 9: 'j', 10: 'k', 11: 'l', 12: 'm', 13: ' ', 14: '-', 
                 15: '?', 16: 'switch'}
 
-SESSION_TEXT = []
+SESSION_TEXT = ''''''
+SESSION_IMG = np.zeros((500,500,3))
 CURRENT_HALF = "first"
