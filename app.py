@@ -1,17 +1,24 @@
 import streamlit as st
-import numpy as np
-import matplotlib.pyplot as plt
-import json
-from config import config
-import prediction_pipeline_runner
+import cv2
 
-st.header("Text Generator with Gestures", divider='rainbow')   
+st.header("Text Generation by hand gesture")
+cp = cv2.VideoCapture(0)
+stop = st.button("stop")
+st.write("Press q to quite the video")
+st.frameplace = st.empty()
 
-col1, col2 = st.columns([2, 2])
-with col1:
-    st.header("Generated Text")
-    st.text_area(config.SESSION_TEXT)
+while True and not stop:
+    sucess, frame = cp.read()
+    if not sucess:
+        st.write("Frame not successed")
+        break
 
-with col2:
-    st.header("Generated Image")
-    st.image(config.SESSION_IMG)
+    if cv2.waitKey(10) & 0xFF == ord('q'):
+        break
+    
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    st.frameplace.image(frame)
+
+cp.release()
+
+
