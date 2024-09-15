@@ -38,9 +38,8 @@ EPOCHS = 10
 
 # current model 
 CURRENT_MODEL = "trained_models\\2024-09-01 23-31-08.keras"
-CONFERMATION_RATE = 20
-CONFIRMER_LIMIT = 10
-CONFERMATION_LIS = [-1] * CONFERMATION_RATE
+CONFIRMATION_OUT_OFF =  20
+CONFERMATION_LIS = [-1] * CONFIRMATION_OUT_OFF
 
 SECOND_HALF = {
                 0: 'n', 1: 'o', 2: 'p', 3: 'q', 4: 'r', 5: 's', 
